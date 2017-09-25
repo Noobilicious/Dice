@@ -1,12 +1,32 @@
+int b;
+
+void setup()
+{
+  size(570, 340);
+  noLoop();
+}
+
+void draw()
+{
+  for(int i = 0; i < 500; i = i + 60)
+  {
+    for(int j = 0; j < 300; j = j + 60)
+    {
+        Dice1 bob = new Dice1(20 + i,20 + j);
+        bob.show();
+    }    
+  }  
+}
+
 void mousePressed()
 {
   redraw();
 }
 
-class Dice
+class Dice1
 { 
   int myX, myY, a;
-  Dice(int x, int y) //constructor
+  Dice1(int x, int y) //constructor
   {
     myX = x;
     myY = y;
